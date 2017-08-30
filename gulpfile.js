@@ -28,7 +28,7 @@ function compileJs() {
             'src/**/*.js'
         ])
         .pipe(concat('scripts.min.js'))
-        // .pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest('public'));
 }
 
