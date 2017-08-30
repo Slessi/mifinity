@@ -1,0 +1,22 @@
+<h3 class="md-headline">Contacts</h3>
+<h4 class="md-subhead">You have {{vm.contacts.length}} contacts</h4>
+
+<md-list class="contacts-list">
+    <md-list-item ng-repeat="contact in vm.contacts">
+        <md-button ui-sref="contactDetails({id: contact.id})">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <span>{{contact.name}}</span>
+        </md-button>
+    </md-list-item>
+</md-list>
+
+<md-divider></md-divider>
+
+<form ng-submit="vm.createContact()">
+    <md-input-container>
+        <label>New Contact</label>
+        <input ng-model="vm.newContactName" required>
+    </md-input-container>
+
+    <md-button type="submit">Save</md-button>
+</form>

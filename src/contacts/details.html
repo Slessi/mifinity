@@ -1,0 +1,32 @@
+<h3 class="md-headline">{{vm.contact.name}}</h3>
+
+<form name="addressForm" ng-submit="vm.save()">
+    <p ng-if="!vm.addresses.length">Contact has no addresses.</p>
+
+    <div ng-repeat="address in vm.addresses | orderBy:'id'">
+        <h4 class="md-subhead">Address #{{$index + 1}} <md-button type="button" ng-click="vm.removeAddress(address.id)"><i class="fa fa-times" aria-hidden="true"></i> Remove</md-button></h4>
+
+        <md-input-container class="md-block">
+            <label>Street 1</label>
+            <input ng-model="address.street_1" required>
+        </md-input-container>
+
+        <md-input-container class="md-block">
+            <label>Street 2</label>
+            <input ng-model="address.street_2" required>
+        </md-input-container>
+
+        <md-input-container class="md-block">
+            <label>Town</label>
+            <input ng-model="address.town" required>
+        </md-input-container>
+
+        <md-input-container class="md-block">
+            <label>Country</label>
+            <input ng-model="address.country" required>
+        </md-input-container>
+    </div>
+
+    <md-button type="button" ng-click="vm.addAddress()"><i class="fa fa-plus" aria-hidden="true"></i> Add Address</md-button>
+    <md-button type="submit" ng-disabled="addressForm.$invalid || !vm.addresses.length"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</md-button>
+</form>

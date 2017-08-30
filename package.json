@@ -1,7 +1,7 @@
 {
   "name": "mifinity",
   "version": "1.0.0",
-  "description": "",
+  "description": "Assignment for Mifinity",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,10 +17,19 @@
   },
   "homepage": "https://github.com/Slessi/mifinity#readme",
   "dependencies": {
+    "json-server": "^0.12.0"
+  },
+  "devDependencies": {
+    "@uirouter/angularjs": "^1.0.6",
     "angular": "^1.6.6",
     "angular-animate": "^1.6.6",
     "angular-aria": "^1.6.6",
     "angular-material": "^1.1.4",
-    "json-server": "^0.12.0"
+    "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-less": "^3.3.2",
+    "gulp-uglify": "^3.0.0",
+    "less": "^2.7.2"
   }
 }

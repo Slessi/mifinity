@@ -1,0 +1,18 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "name": "John Doe"
+    },
+  ],
+  "addresses": [
+    {
+      "contactId": "1",
+      "id": 4,
+      "street_1": "Somewhere",
+      "street_2": "Over the rainbow",
+      "town": "In a land far far away",
+      "country": "Country"
+    }
+  ]
+}

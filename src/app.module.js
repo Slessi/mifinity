@@ -2,7 +2,8 @@
     'use strict';
 
     angular.module('mifinity', [
-        'ngMaterial'
+        'ngMaterial',
+        'ui.router'
     ]);
 
     angular.element(document).ready(function onDocumentReady() {
